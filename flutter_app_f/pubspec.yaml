@@ -1,0 +1,33 @@
+name: flutter_app_f
+description: A new Flutter project.
+
+# This prevents accidental publishing to pub.dev
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  file_picker: ^10.1.2
+  # ✅ Downgraded to avoid v1 embedding issue
+  http: ^1.3.0                   # Latest http package
+  path: ^1.9.0                   # For file path operations
+  permission_handler: ^12.0.0+1
+  google_fonts: ^6.1.0
+  audioplayers: ^5.2.1
+  flutter_spinkit: ^5.2.0
+  fluttertoast: ^8.2.4 # Compa         # ✅ For applying custom fonts
+#tible with Android 13 & Flutter 3.7.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0          # Compatible with Dart 3+
+
+flutter:
+  uses-material-design: true
