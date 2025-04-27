@@ -11,6 +11,9 @@ from parselmouth.praat import call
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Layer
 import tensorflow.keras.backend as K
+from waitress import serve
+from app import app
+
 
 app = Flask(__name__)
 
@@ -137,4 +140,4 @@ def predict():
         return jsonify({"error": "Internal Server Error", "details": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    serve(app, host='0.0.0.0', port=5000)
