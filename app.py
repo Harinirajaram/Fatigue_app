@@ -13,9 +13,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Layer
 import tensorflow.keras.backend as K
 
-from app import app
 
-
+from flask import Flask
 app = Flask(__name__)
 CORS(app) 
 
